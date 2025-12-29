@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Payment Page</title>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return false;
+            }
+
+            var payment = document.querySelector('input[name="payment"]:checked');
+            if (!payment) {
+                alert("Please select a payment method.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Registration and Payment</h2>
+
+    <form onsubmit="return validateForm()">
+        <!-- Registration Fields -->
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+
+        <!-- Payment Selection -->
+        <label><input type="radio" name="payment" value="Credit Card"> Credit Card</label><br>
+        <label><input type="radio" name="payment" value="PayPal"> PayPal</label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
