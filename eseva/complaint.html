@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highlight Words with RegEx</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Highlight Specific Words</h2>
+    <p>Type text below. Click "Highlight Words" to highlight specific keywords.</p>
+    
+    <textarea id="textInput" placeholder="Enter your text here..."></textarea><br><br>
+    <button onclick="highlightWords()">Highlight Words</button>
+
+    <div id="output"></div>
+
+    <script>
+        const keywords = ["JavaScript", "HTML", "highlight", "text"]; // Words to highlight
+
+        function highlightWords() {
+            const text = document.getElementById("textInput").value;
+            const outputDiv = document.getElementById("output");
+
+            // Escape special regex characters in keywords
+            const escapedWords = keywords.map(word => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+            
+            // Create regex to match any keyword
+            const regex = new RegExp(`\\b(${escapedWords.join("|")})\\b`, "gi");
+
+            // Replace matched words with span for highlight
+            const highlightedText = text.replace(regex, match => `<span class="highlight">${match}</span>`);
+
+            outputDiv.innerHTML = highlightedText;
+        }
+    </script>
+
+</body>
+</html>

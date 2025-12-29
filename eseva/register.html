@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Eseva</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f1f1f1;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #1976d2;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Navigation link styling */
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c3f3df;
+            text-decoration: underline;
+        }
+
+        /* Heading for Register page */
+        h2 {
+            text-align: center;
+            color: #1976d2;
+            margin-top: 40px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Centering container */
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form card styling */
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 380px;
+            text-align: center;
+        }
+
+        /* Label styling */
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border 0.3s ease;
+        }
+
+        /* Input fields focus effect */
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #1976d2;
+            outline: none;
+        }
+
+        /* Submit button styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        /* Horizontal line styling */
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media screen and (max-width: 500px) {
+            .card {
+                padding: 25px;
+                width: 90%;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="complaint.html">Complaint</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Register</h2>
+
+            <form action="register.php" method="post">
+                <label>Name:</label>
+                <input type="text" name="name" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" required>
+
+                <button type="submit" name="action" value="insert">Register</button>
+
+                <hr style="margin: 25px 0;">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
