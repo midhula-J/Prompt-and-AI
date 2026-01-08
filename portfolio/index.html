@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midhula J | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+/* Navbar */
+.nav{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:rgba(15,23,42,0.85);
+  padding:12px 22px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 15px rgba(34,197,94,0.4);
+  z-index:1000;
+}
+
+.nav a{
+  color:#22c55e;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.nav a:hover{ color:#38bdf8; }
+
+/* Hero with background image */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.7)),
+    url("bg.jpg") no-repeat center/cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.profile-pic{
+  width: 240px;
+  height: 240px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #22c55e;
+  box-shadow:0 0 30px #22c55e;
+  margin-bottom:30px;
+}
+
+.hero h1{ font-size:2.8rem; }
+
+.hero span{
+  background:linear-gradient(90deg,#22c55e,#38bdf8);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero h3{ color:#e5e7eb; margin-top:10px; }
+
+.socials{ margin-top:20px; }
+
+.socials a{
+  font-size:28px;
+  margin:0 15px;
+  color:#22c55e;
+  transition:.3s;
+}
+
+.socials a:hover{
+  color:#38bdf8;
+  transform:scale(1.3);
+}
+
+/* Sections */
+section{ padding:80px 20px; text-align:center; }
+
+.dark{ background:#020617; }
+
+h2{
+  font-size:2.2rem;
+  margin-bottom:30px;
+  color:#38bdf8;
+}
+
+/* About */
+.about p{
+  max-width:750px;
+  margin:auto;
+  color:#cbd5f5;
+  line-height:1.8;
+}
+
+/* Cards */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.card{
+  background:#020617;
+  width:300px;
+  padding:20px;
+  border-radius:18px;
+  box-shadow:0 0 15px rgba(34,197,94,0.3);
+  transition:.4s;
+  text-align:left;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #38bdf8;
+}
+
+.card h3{ color:#22c55e; margin-bottom:10px; }
+
+/* Skills */
+.skill{
+  background:#020617;
+  padding:12px 28px;
+  border-radius:25px;
+  box-shadow:0 0 12px rgba(56,189,248,0.3);
+  transition:.3s;
+}
+
+.skill:hover{
+  background:linear-gradient(90deg,#22c55e,#38bdf8);
+  color:black;
+  transform:scale(1.1);
+}
+
+/* Contact */
+.contact p{ margin:8px 0; color:#cbd5f5; }
+
+.footer{
+  padding:20px;
+  text-align:center;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="nav">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <img src="photo1.png" class="profile-pic">
+  <h1><span>Midhula</span> <span>J</span></h1>
+  <h4><span>Loyola-Icam college of Engineering and technology</span></h4>
+  <h3>B.Tech IT Student | UI/UX Designer</h3>
+
+  <div class="socials">
+    <a href="https://github.com/midhula-J" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/midhula-j-7667132a4" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:Midhula.27it@licet.ac.in"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about dark">
+<h2> <span>About Me</span></h2>
+<p>
+B.Tech IT student passionate about technology, skilled in UI/UX and Event Management, with a strong drive for innovation and extracurricular engagement.
+</p>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+<h2><span>Experience & Workshops</span></h2>
+<div class="container">
+  <div class="card">
+    <h3>Event Manager – Fab Lab</h3>
+    <p>Mar 2024 – Present</p>
+    <p>Skills: Event management, 3D printing</p>
+  </div>
+
+  <div class="card">
+    <h3>Carpe’ Diem Hackathon</h3>
+    <p>Mar 2024</p>
+    <p>Front-end development using Flutter</p>
+  </div>
+
+  <div class="card">
+    <h3>IoT Workshop – Pattarai</h3>
+    <p>Dec 2023</p>
+    <p>Arduino, IDE</p>
+  </div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="dark">
+  <h2><span>Projects</span></h2>
+  <div class="container">
+    <!-- Chat App Project -->
+    <div class="card">
+      <img src="chat.png" alt="Mobile Chat App UI" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="chat 1.png" alt="Mobile Chat App UI" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <h3>💬 Mobile Chat App UI</h3>
+      <p>UI/UX design project.</p>
+    </div>
+
+    <!-- Cop Friendly App Project -->
+    <div class="card">
+      <img src="eava1.png" alt="Cop Friendly App 1" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="esava2.png" alt="Cop Friendly App 2" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <h3>🚓 Cop Friendly App (Eseva)</h3>
+      <p>SQL based mini project.</p>
+    </div>
+
+    <!-- Food Delivery App Project -->
+    <div class="card">
+      <img src="food 1.png" alt="Food Delivery App" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="food 2.png" alt="Food Delivery App" style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <h3>🍔 Food Delivery App</h3>
+      <p>Full stack mini project for online food ordering and delivery.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Skills -->
+<section id="skills">
+<h2><span>Skills</span></h2>
+<div class="container">
+  <div class="skill">UI/UX Design</div>
+  <div class="skill">Power BI</div>
+  <div class="skill">Microsoft Excel</div>
+  <div class="skill">HTML & CSS</div>
+  <div class="skill">Prompt Engineering</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact dark">
+<h2><span>Contact</span></h2>
+<p>📍 Chennai, Tamil Nadu</p>
+<p>📧 Midhula.27it@licet.ac.in</p>
+<p>📞 6383176487</p>
+</section>
+
+<div class="footer">
+© 2026 Midhula J | Portfolio
+</div>
+
+</body>
+</html>
